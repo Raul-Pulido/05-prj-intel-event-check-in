@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,6 +37,25 @@
     <div class="container">
       <!-- Feedback message -->
       <p id="greeting"></p>
+      <!-- Modal for greeting popup -->
+      <div id="greetingModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <p id="modalMessage"></p>
+          <canvas
+            id="confettiCanvas"
+            width="320"
+            height="180"
+            style="
+              display: none;
+              position: absolute;
+              left: 0;
+              top: 0;
+              pointer-events: none;
+            "
+          ></canvas>
+        </div>
+      </div>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -70,14 +89,17 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <ul class="attendee-list" id="waterList"></ul>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <ul class="attendee-list" id="zeroList"></ul>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <ul class="attendee-list" id="powerList"></ul>
           </div>
         </div>
       </div>

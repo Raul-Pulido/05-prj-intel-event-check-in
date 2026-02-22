@@ -1,3 +1,64 @@
+/* Attendee list styles */
+.attendee-list {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 15px;
+  color: #333;
+  text-align: left;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.team-card.water .attendee-list li {
+  background: #d2f0fa;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+}
+.team-card.zero .attendee-list li {
+  background: #d6fbe7;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+}
+.team-card.power .attendee-list li {
+  background: #ffe7c7;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 24px 32px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+}
+.close {
+  color: #0071c5;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* Modern reset */
 * {
   margin: 0;
@@ -25,7 +86,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
